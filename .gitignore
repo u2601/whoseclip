@@ -1,0 +1,20 @@
+# Build output: architecture subdirectories, objects and binaries.
+build/
+
+# MSVC artifacts wherever they land.
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.idb
+
+# Runtime config that WhoseClip writes next to its own exe (strip position and
+# visibility). The sample at the repo root is tracked deliberately.
+whoseclip.ini
+!/whoseclip.ini
+
+# Screenshots from the test scripts.
+tools/screenshots/
+
+# The prebuilt binaries are shipped in the repo, so they beat the *.exe rule.
+!release/*.exe
