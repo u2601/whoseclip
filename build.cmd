@@ -46,7 +46,7 @@ exit /b 0
 :build
 echo === %~2 ===
 if not exist "build\%~2" mkdir "build\%~2"
-cmd /c ""%VCVARSALL%" %~1 >nul 2>&1 && cl /nologo /W4 /WX /O2 /MT /utf-8 /GS /guard:cf /EHsc /DUNICODE /D_UNICODE /Fo"build\%~2\\" /Fe"build\%~2\whoseclip.exe" src\main.cpp src\clip.cpp /link /SUBSYSTEM:WINDOWS /DYNAMICBASE /NXCOMPAT user32.lib gdi32.lib shell32.lib"
+cmd /c ""%VCVARSALL%" %~1 >nul 2>&1 && cl /nologo /W4 /WX /O2 /MT /utf-8 /GS /guard:cf /EHsc /DUNICODE /D_UNICODE /Fo"build\%~2\\" /Fe"build\%~2\whoseclip.exe" src\win32\main.cpp src\win32\clip.cpp /link /SUBSYSTEM:WINDOWS /DYNAMICBASE /NXCOMPAT user32.lib gdi32.lib shell32.lib"
 exit /b %errorlevel%
 
 :findvs

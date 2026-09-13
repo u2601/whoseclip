@@ -13,8 +13,8 @@ build/
 whoseclip.ini
 !/whoseclip.ini
 
-# Screenshots from the test scripts.
-tools/screenshots/
+# Anything the tests leave behind.
+screenshots/
 
 # The prebuilt binaries are shipped in the repo, so they beat the *.exe rule.
 !release/*.exe

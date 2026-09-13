@@ -1,0 +1,13 @@
+# The Linux tree gets copied onto Linux machines as-is, sometimes with scp
+# rather than a clone. CRLF stops make and bash dead, so everything under
+# src/linux keeps LF in the working copy on every platform. The Windows tree
+# under src/win32 is left to whatever the local default is, which is what it
+# has always had.
+Makefile             text eol=lf
+*.sh                 text eol=lf
+src/linux/**         text eol=lf
+
+# Never rewrite the shipped binaries or the screenshots.
+*.exe binary
+*.png binary
+release/whoseclip-linux-x64 binary
